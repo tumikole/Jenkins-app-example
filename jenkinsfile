@@ -3,18 +3,20 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "node index.js"
+                                sh "git clone https://github.com/tumikole/Jenkins-app-example.git"
+
+                sh "cd /home/thecodingground/workspace/Jenkins-app-example/"
             }
         }
         stage("Test") {
             steps {
-                // sh "sudo npm install"
-                // sh "sudo npm run build"
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
         stage("Deploy") {
             steps {
-                // sh "sudo rm -rf /var/www/jenkins-react-app"
+                sh "sudo "
                 // sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
             }
         }
