@@ -4,8 +4,8 @@ pipeline {
         stage("Build") {
             steps {
                 sh "git clone https://github.com/tumikole/Jenkins-app-example.git"
-                sh "sudo npm install"
-                sh "sudo npm run build"
+                // sh "sudo npm install"
+                // sh "sudo npm run build"
                 echo"Application succesfully bulded"
 
             }
@@ -19,7 +19,10 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh"/var/lib/jenkins/workspace/My first job/"
+                echo"------------------------------"
+                echo"This is a test  stage"
+                echo"------------------------------"
+                // sh"/var/lib/jenkins/workspace/My first job/"
             }
         }
     }
