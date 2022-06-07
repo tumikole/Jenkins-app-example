@@ -3,7 +3,6 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "sudo rm - rf Jenkins-app-example"
                 sh "git clone https://github.com/tumikole/Jenkins-app-example.git"
                 sh "sudo npm install"
                 sh "sudo npm run build"
