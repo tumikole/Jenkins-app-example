@@ -6,7 +6,7 @@ pipeline {
                 sh "git clone https://github.com/tumikole/Jenkins-app-example.git"
                 sh "sudo npm install"
                 sh "sudo npm run build"
-                                echo"Application succesfully bulded"
+                echo"Application succesfully bulded"
 
             }
         }
